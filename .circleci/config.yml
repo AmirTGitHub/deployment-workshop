@@ -21,9 +21,21 @@ jobs:
       - run:
           name: Docker push deploymentAmir
           command: docker push $DOCKER_USER/deploymentamir
+
+  deploy_to_dev:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Set env variables
+          command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
 workflows:
   version: 2
   build_and_deploy:
     jobs:
       - build 
-      
+      - deploy:
+          requires:
+            - build
