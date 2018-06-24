@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Docker login
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS 
-       - run:
+      - run:
           name: Docker push deploymentAmir
           command: docker push $DOCKER_USER/deploymentAmir
 workflows:
