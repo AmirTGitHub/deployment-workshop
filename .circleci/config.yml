@@ -22,7 +22,7 @@ jobs:
           name: Docker push deploymentAmir
           command: docker push $DOCKER_USER/deploymentamir
 
-  deploy_to_dev:
+  deploy:
     docker:
       - image: circleci/node:8
     steps:
