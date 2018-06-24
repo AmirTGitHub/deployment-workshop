@@ -3,9 +3,8 @@
 HOST="34.243.242.180"
 EC2_USER="ec2-user"
 KEY_FILE="~/.ssh/devopstest.pem"
-CONTAINER = "amircontainer"
+CONTAINER="amircontainer"
 
-mkdir ~/.ssh
 chmod 700 ~/.ssh
 echo "$PKEY" >> $KEY_FILE
 chmod 600 $KEY_FILE
