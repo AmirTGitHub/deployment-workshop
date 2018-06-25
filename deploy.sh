@@ -2,7 +2,7 @@
 
 HOST="34.243.242.180"
 EC2_USER="ec2-user"
-KEY_FILE="~/.ssh"
+KEY_FILE="/home/ubuntu/.ssh/34.243.242.180"
 CONTAINER="amircontainer"
 
 
