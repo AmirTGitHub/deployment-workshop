@@ -14,13 +14,13 @@ jobs:
           command: echo 'export VERSION=$(echo $CIRCLE_SHA1 | cut -c -7)' >> $BASH_ENV
       - run:
           name: Build Amir
-          command: docker build -t $DOCKER_USER/deploymentamir:$VERSION --build-arg version=$VERSION .
+          command: docker build -t $DOCKER_USER/$CONTAINER:$VERSION --build-arg version=$VERSION .
       - run:
           name: Docker login
           command: docker login -u $DOCKER_USER -p $DOCKER_PASS 
       - run:
-          name: Docker push deploymentAmir
-          command: docker push $DOCKER_USER/deploymentamir
+          name: Docker push
+          command: docker push $DOCKER_USER/$CONTAINER
 
   deploy:
     docker:
