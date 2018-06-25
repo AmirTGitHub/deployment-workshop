@@ -2,12 +2,12 @@
 
 HOST="34.243.242.180"
 EC2_USER="ec2-user"
-# KEY_FILE="~/.ssh/"
-CONTAINER="amircontainer"
-IdentityFile /home/ubuntu/.ssh/id_34.243.242.180
+# # KEY_FILE="~/.ssh/"
+# CONTAINER="amircontainer"
+# KEY_FILE="/home/ubuntu/.ssh/id_34.243.242.180"
 
-chmod 700 ~/.ssh
-# echo "$PKEY" >> $KEY_FILE
+# chmod 700 ~/.ssh
+# # echo "$PKEY" >> $KEY_FILE
 # chmod 600 $KEY_FILE
 
 
