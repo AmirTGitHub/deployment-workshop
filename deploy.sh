@@ -12,4 +12,4 @@ EC2_USER="ec2-user"
 
 
 # ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null 
-ssh $HOST -l $EC2_USER -i  "sudo docker pull $DOCKER_USER/deploymentamir:$VERSION && sudo docker stop $CONTAINER && sudo docker rm $CONTAINER && sudo docker run --name $CONTAINER $DOCKER_USER/deploymentamir:$VERSION"
+ssh -o StrictHostKeyChecking=no $HOST -l $EC2_USER -i  "sudo docker pull $DOCKER_USER/deploymentamir:$VERSION && sudo docker stop $CONTAINER && sudo docker rm $CONTAINER && sudo docker run --name $CONTAINER $DOCKER_USER/deploymentamir:$VERSION"
